@@ -63,25 +63,25 @@ kill @e[type=item]
 
 #Display title
 title @a times 20 40 20
-title @a title {"text":"Let the Games Begin!", "bold":true, "italic":true, "color":"green"}
+title @a title {"text":"GOOD LUCK!", "bold":true, "italic":true, "color":"green"}
 
 # Dispaly more info.
-tellraw @a [{"text":"Welcome to a round of MiniPurge!","bold":true,"color":"red"}]
+tellraw @a [{"text":"UHCFUNNY SPEED BR","bold":true,"color":"yellow"}]
 
 # Display peace info.
-execute if score #peace variables matches 0 run tellraw @a [{"text":"No Rest for the Weary.","bold":true,"color":"white"}]
-$execute if score #peace variables matches 1.. run tellraw @a [{"text":"You have been granted ","bold":true,"color":"white"}, {"text":"$(peace_mins)","bold":true,"color":"green"}, {"text":" minutes of peace.","color":"white"}]
+execute if score #peace variables matches 0 run tellraw @a [{"text":"NO PEACE","bold":true,"color":"white"}]
+$execute if score #peace variables matches 1.. run tellraw @a [{"text":"You have ","bold":true,"color":"white"}, {"text":"$(peace_mins)","bold":true,"color":"green"}, {"text":" minutes of peace!!!","color":"white"}]
 
 # Display war info.
-$execute if score #war variables matches 1.. run tellraw @a [{"text":"You have ","color":"white","bold":true}, {"text":"$(war_mins)","bold":true,"color":"yellow"}, {"text":" minutes to prove your minecraft superiority.","color":"white","bold":true}]
+$execute if score #war variables matches 1.. run tellraw @a [{"text":"The pvp phase will last ","color":"white","bold":true}, {"text":"$(war_mins)","bold":true,"color":"yellow"}, {"text":" minutes.","color":"white","bold":true}]
 
 # Display border shrink info.
-$execute if score #shrink variables matches 1.. run tellraw @a [{"text":"The border will shrink in on ","color":"white","bold":true}, {"text":"$(center_x_pos), $(center_y_pos), $(center_z_pos)","bold":true,"color":"blue"},{"text":" over ","color":"white","bold":true},{"text":"$(shrink_mins)","bold":true,"color":"red"}, {"text":" minutes.","color":"white","bold":true}]
+$execute if score #shrink variables matches 1.. run tellraw @a [{"text":"The border shrinks to ","color":"white","bold":true}, {"text":"$(center_x_pos), $(center_y_pos), $(center_z_pos)","bold":true,"color":"blue"},{"text":" over ","color":"white","bold":true},{"text":"$(shrink_mins)","bold":true,"color":"red"}, {"text":" minutes.","color":"white","bold":true}]
 execute if score #shrink variables matches 0 run tellraw @a [{"text":"The border will not shrink.","bold":true,"color":"white"}]
 
 # Display lives info.
 $execute if score #lives variables matches 2.. run tellraw @a [{"text":"Use your ","color":"white","bold":true}, {"text":"$(lives)","bold":true,"color":"green"},{"text":" lives wisely.","color":"white","bold":true}]
-execute if score #lives variables matches 1 run tellraw @a [{"text":"This round is in hardcore mode.","color":"white","bold":true}]
+execute if score #lives variables matches 1 run tellraw @a [{"text":"HARDCORE MODE IS ON","color":"red","bold":true}]
 
 tellraw @a [{"text":"Good luck!","bold":true,"color":"green"}]
 
